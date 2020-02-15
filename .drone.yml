@@ -1,3 +1,6 @@
+kind: pipeline
+name: default
+steps:
 # 42 is the build number 
 # drone build promote fanux/sealos 42 test
 - name: e2etest
