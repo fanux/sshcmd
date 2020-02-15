@@ -1,0 +1,16 @@
+# 42 is the build number 
+# drone build promote fanux/sealos 42 test
+- name: e2etest
+  image: golang:1.12
+  commands:
+    - echo "this is sealos test"
+  when:
+    event:
+    - promote
+    target:
+    - test
+
+- name: echo
+  image: golang:1.12
+  commands:
+    - echo "this is echo test"
